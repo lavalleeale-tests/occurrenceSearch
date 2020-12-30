@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.axlav</groupId>
-    <artifactId>occurencesSeach</artifactId>
+    <artifactId>occurencesSearch</artifactId>
     <version>1.0</version>
     <build>
         <plugins>
