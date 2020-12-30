@@ -24,7 +24,6 @@ jobs:
           name: occurenceSearch.jar
           path: target/occurenceSearch.jar
   build:
-    name: Upload Release Asset
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
