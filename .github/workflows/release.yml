@@ -21,8 +21,8 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: occurenceSearch.jar
-          path: target/occurenceSearch.jar
+          name: occurrenceSearch.jar
+          path: target/occurrenceSearch.jar
   build:
     runs-on: ubuntu-latest
     steps:
@@ -50,6 +50,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }} # This pulls from the CREATE RELEASE step above, referencing it's ID to get its outputs object, which include a `upload_url`. See this blog post for more info: https://jasonet.co/posts/new-features-of-github-actions/#passing-data-to-future-steps 
-          asset_path: ./target/occurenceSearch.jar
-          asset_name: occurenceSearch.jar
+          asset_path: ./target/occurrenceSearch.jar
+          asset_name: occurrenceSearch.jar
           asset_content_type: application/java-archive

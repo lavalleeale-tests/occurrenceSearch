@@ -17,5 +17,5 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: occurenceSearch.jar
-          path: target/occurenceSearch.jar
+          name: occurrenceSearch.jar
+          path: target/occurrenceSearch.jar
