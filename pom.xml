@@ -5,13 +5,30 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.axlav</groupId>
-    <artifactId>occurenceSearch</artifactId>
+    <artifactId>occurrenceSearch</artifactId>
     <version>1.0</version>
-    <packaging>jar</packaging>
+    <build>
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <mainClass>com.axlav.Main</mainClass>
+                        </manifest>
+                    </archive>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <finalName>occurrenceSearch</finalName>
+                    <appendAssemblyId>false</appendAssemblyId>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <jar.finalName>occurenceSearch</jar.finalName>
     </properties>
-    
+
 </project>

@@ -1,1 +1,1 @@
-mvn clean compile assembly:single -q
+mvn clean package -q

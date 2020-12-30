@@ -13,7 +13,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Maven
-        run: mvn package
+        run: mvn clean compile assembly:single -q
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:

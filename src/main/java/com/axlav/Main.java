@@ -1,6 +1,5 @@
 package com.axlav;
 
-import java.util.Random;
 import java.io.*;
 import java.util.Scanner;
 
@@ -21,11 +20,9 @@ public class Main {
 		int letterMatches = 0;
 		int skipMatches;
 		int totalMatches = 0;
-	    String alphabetString = "abcdefghijklmnopqrstuvwxyz";
-	    char[] alphabetChars = alphabetString.toCharArray();
 		String target = args[0].toLowerCase().replaceAll("\\W", "");
 	    char[] targetChars = target.toCharArray();
-		System.out.println(target);
+		System.out.println("Searching For: " + target);
 
 	    for (int i = 1; i < (chars.length/targetChars.length);i++) {
 	    	skipMatches = 0;
@@ -44,17 +41,16 @@ public class Main {
             }
 	        if (skipMatches!=0) {
 				totalMatches+=skipMatches;
-				if (skipMatches>1) {
-					System.out.println(skipMatches+ " Matches Found!");
-				} else {
-					System.out.println("1 Match Found!");
-				}
-				System.out.println("Skip: "+i);
-				System.out.println("Total Matches: "+totalMatches);
 			}
-        }
+			System.out.print("\rSkip: "+i+" | Total Matches: "+totalMatches);
+	        Thread.sleep(0,0);
+		}
 	    if (totalMatches==0) {
-	    	System.out.println("Zero Matches Found");
+	    	System.out.println("\nFinished: Zero Matches Found");
+		} else if (totalMatches>1){
+	    	System.out.println("\nFinished: " + totalMatches + " Matches Found");
+		} else {
+			System.out.println("\nFinished: " + totalMatches + " Match Found");
 		}
     }
 }
